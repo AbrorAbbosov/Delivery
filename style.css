@@ -187,7 +187,14 @@ body.dark-theme {
 .nav__link, .nav__logo, .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  transition: .5s;
 }
+
+.nav__link:hover{
+  color: hsl(var(--hue), var(--sat), 60%);
+  font-weight: var(--font-semi-bold);
+}
+
 
 .nav__toggle {
   font-size: 20px;
