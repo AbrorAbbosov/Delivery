@@ -1,9 +1,7 @@
-/*=============== GOOGLE FONTS ===============*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3rem;
-  /*========== Colors ==========*/
+  --header-height: 48px;
   --hue: 45;
   --sat: 98%;
   --first-color: hsl(var(--hue), var(--sat), 60%);
@@ -17,40 +15,35 @@
   --container-color: #FFF;
   --scroll-bar-color: hsl(var(--hue), 4%, 85%);
   --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
-  /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
-  /*========== Font weight ==========*/
+  --biggest-font-size: 32px;
+  --h2-font-size: 20px;
+  --h3-font-size: 18px;
+  --normal-font-size: 15px;
+  --small-font-size: 13px;
+  --smaller-font-size: 12px;
   --font-semi-bold: 600;
   --font-bold: 700;
-  /*========== Margenes ==========*/
-  --mb-0-5: .5rem;
-  --mb-0-75: .75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  /*========== z index ==========*/
+  --mb-0-5: 8px;
+  --mb-0-75: 12px;
+  --mb-1: 16px;
+  --mb-1-5: 24px;
+  --mb-2: 32px;
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
 @media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: 3rem;
-    --h2-font-size: 1.75rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --biggest-font-size: 48px;
+    --h2-font-size: 28px;
+    --h3-font-size: 20px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 13px;
   }
 }
 
-/*=============== BASE ===============*/
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 0;
@@ -89,8 +82,6 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
-/*========== Variables Dark theme ==========*/
 body.dark-theme {
   --first-color-light: hsl(var(--hue), var(--sat), 75%);
   --title-color: hsl(var(--hue), 4%, 95%);
@@ -101,13 +92,13 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue), 4%, 24%);
 }
 
-/*========== Button Dark/Light ==========*/
+
 .change-theme {
   position: absolute;
-  right: 1.5rem;
-  top: 2.2rem;
+  right: 24px;
+  top: 35px;
   color: var(--title-color);
-  font-size: 1.8rem;
+  font-size: 28px;
   cursor: pointer;
 }
 
@@ -115,9 +106,8 @@ body.dark-theme {
   background-color: var(--container-color);
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 4.5rem 0 1rem;
+  padding: 72px 0 16px;
 }
 
 .section__title, .section__title-center {
@@ -140,7 +130,7 @@ body.dark-theme {
   justify-self: center;
 }
 
-/*=============== LAYOUT ===============*/
+
 .container {
   max-width: 968px;
   margin-left: var(--mb-1-5);
@@ -149,10 +139,9 @@ body.dark-theme {
 
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
-/*=============== HEADER ===============*/
 .header {
   width: 100%;
   background-color: var(--body-color);
@@ -163,7 +152,7 @@ body.dark-theme {
   transition: .5s;
 }
 
-/*=============== NAV ===============*/
+
 .nav {
   height: var(--header-height);
   display: flex;
@@ -176,14 +165,14 @@ body.dark-theme {
     position: fixed;
     background-color: var(--container-color);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    padding: 2.5rem 0;
+    padding: 40px 0;
     width: 90%;
     top: -100%;
     left: 0;
     right: 0;
     margin: 0 auto;
     transition: .4s;
-    border-radius: 2rem;
+    border-radius: 32px;
     z-index: var(--z-fixed);
   }
 }
@@ -192,7 +181,7 @@ body.dark-theme {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1.5rem;
+  row-gap: 24px;
 }
 
 .nav__link, .nav__logo, .nav__toggle {
@@ -201,16 +190,16 @@ body.dark-theme {
 }
 
 .nav__toggle {
-  font-size: 1.3rem;
+  font-size: 20px;
   cursor: pointer;
 }
 
-/* Show menu */
+
 .show-menu {
-  top: calc(var(--header-height) + 1rem);
+  top: calc(var(--header-height) + 16px);
 }
 
-/* Active link */
+
 .active-link {
   position: relative;
 }
@@ -218,7 +207,7 @@ body.dark-theme {
 .active-link::before {
   content: '';
   position: absolute;
-  bottom: -.75rem;
+  bottom: -12px;
   left: 45%;
   width: 5px;
   height: 5px;
@@ -226,14 +215,13 @@ body.dark-theme {
   border-radius: 50%;
 }
 
-/* Change background header */
 .scroll-header {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*=============== HOME ===============*/
+
 .home__container {
-  row-gap: 3rem;
+  row-gap: 48px;
 }
 
 .home__title {
@@ -246,13 +234,13 @@ body.dark-theme {
   margin-bottom: var(--mb-2);
 }
 
-/*=============== BUTTONS ===============*/
+
 .button {
   display: inline-block;
   background-color: var(--first-color);
   color: #1A1A1A;
-  padding: .75rem 1.5rem;
-  border-radius: 3rem;
+  padding: 12px 24px;
+  border-radius: 48px;
   font-weight: var(--font-semi-bold);
   transition: .3s;
 }
@@ -278,44 +266,41 @@ body.dark-theme {
 .button-flex {
   display: inline-flex;
   align-items: center;
-  column-gap: .25rem;
-  padding: .75rem 1rem;
+  column-gap: 4px;
+  padding: 12px 16px;
 }
 
 .button__icon {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
-/*=============== ABOUT ===============*/
 .about__container {
-  gap: 2.5rem;
+  gap: 40px;
 }
 
 .about__data {
   text-align: center;
 }
 
-/*=============== SECURITY ===============*/
 .security__container {
-  gap: 2.5rem;
+  gap: 40px;
 }
 
 .security__data {
   text-align: center;
 }
 
-/*=============== SERVICES ===============*/
 .services__container {
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 
 .services__data {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 16px;
   background-color: var(--container-color);
   box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
+  padding: 32px 24px;
+  border-radius: 16px;
   text-align: center;
 }
 
@@ -325,9 +310,8 @@ body.dark-theme {
   margin-bottom: var(--mb-0-5);
 }
 
-/*=============== APP ===============*/
 .app__container {
-  gap: 2.5rem;
+  gap: 40px;
 }
 
 .app__data {
@@ -342,12 +326,11 @@ body.dark-theme {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
-  gap: .5rem;
+  gap: 8px;
 }
 
-/*=============== CONTACT ===============*/
 .contact__container {
-  padding-bottom: 3rem;
+  padding-bottom: 48px;
 }
 
 .contact__description {
@@ -355,7 +338,7 @@ body.dark-theme {
 }
 
 .contact__content {
-  row-gap: .75rem;
+  row-gap: 12px;
 }
 
 .contact__address {
@@ -369,14 +352,13 @@ body.dark-theme {
   color: var(--text-color);
 }
 
-/*=============== FOOTER ===============*/
 .footer {
   background-color: var(--first-color-lighten);
-  padding-bottom: 2rem;
+  padding-bottom: 32px;
 }
 
 .footer__container {
-  row-gap: 2rem;
+  row-gap: 32px;
 }
 
 .footer__logo, .footer__title {
@@ -396,7 +378,7 @@ body.dark-theme {
 
 .footer__links {
   display: grid;
-  row-gap: .5rem;
+  row-gap: 8px;
 }
 
 .footer__link {
@@ -405,30 +387,29 @@ body.dark-theme {
 
 .footer__social {
   display: flex;
-  column-gap: 1.5rem;
+  column-gap: 24px;
 }
 
 .footer__social-link {
-  font-size: 1.25rem;
+  font-size: 20px;
   color: var(--title-color);
 }
 
 .footer__copy {
-  margin-top: 6rem;
+  margin-top: 96px;
   text-align: center;
   font-size: var(--smaller-font-size);
   color: var(--text-color);
 }
 
-/*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
   background: var(--first-color);
-  right: 1rem;
+  right: 16px;
   bottom: -20%;
   display: inline-flex;
-  padding: .3rem;
-  border-radius: .25rem;
+  padding: 5px;
+  border-radius: 4px;
   z-index: var(--z-tooltip);
   opacity: .8;
   transition: .4s;
@@ -440,39 +421,35 @@ body.dark-theme {
 }
 
 .scrollup__icon {
-  font-size: 1.25rem;
+  font-size: 20px;
   color: var(--title-color);
 }
 
-/* Show Scroll Up*/
 .show-scroll {
-  bottom: 3rem;
+  bottom: 48px;
 }
 
-/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: .6rem;
-  border-radius: .5rem;
+  width: 12px;
+  border-radius: 80px;
   background-color: var(--scroll-bar-color);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-thumb-color);
-  border-radius: .5rem;
+  border-radius: 80px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
 }
 
-/*=============== MEDIA QUERIES ===============*/
-/* For small devices */
 @media screen and (max-width: 360px) {
   .svg__img {
     width: 100%;
   }
   .section {
-    padding: 3.5rem 0 1rem;
+    padding: 56px 0 16px;
   }
   .services__img {
     width: 100px;
@@ -482,7 +459,6 @@ body.dark-theme {
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 576px) {
   .svg__img {
     width: 100%;
@@ -526,14 +502,14 @@ body.dark-theme {
     margin: 0;
   }
   .section {
-    padding: 6rem 0 2rem;
+    padding: 96px 0 32px;
   }
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: calc(var(--header-height) + 24px);
   }
   .nav__list {
     flex-direction: row;
-    column-gap: 2.5rem;
+    column-gap: 40px;
   }
   .nav__toggle {
     display: none;
@@ -542,14 +518,14 @@ body.dark-theme {
     position: initial;
   }
   .home__container {
-    padding: 6rem 0 2rem;
+    padding: 96px 0 32px;
   }
   .app__buttons {
     justify-content: initial;
   }
 }
 
-/* For large devices */
+
 @media screen and (min-width: 968px) {
   .button__header {
     display: block;
@@ -561,7 +537,7 @@ body.dark-theme {
   .security__container,
   .app__container,
   .contact__container {
-    column-gap: 6rem;
+    column-gap: 96px;
   }
   .services__container {
     grid-template-columns: repeat(3, 1fr);
@@ -576,7 +552,7 @@ body.dark-theme {
     align-items: flex-start;
   }
   .footer__social-link {
-    font-size: 1.45rem;
+    font-size: 23px;
   }
 }
 
@@ -589,12 +565,12 @@ body.dark-theme {
     width: 540px;
   }
   .home__description {
-    padding-right: 5rem;
+    padding-right: 80px;
   }
   .footer__container {
-    column-gap: 3rem;
+    column-gap: 48px;
   }
   .scrollup {
-    right: 2rem;
+    right: 32px;
   }
 }
