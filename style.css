@@ -98,7 +98,7 @@ body.dark-theme {
   right: 24px;
   top: 35px;
   color: var(--title-color);
-  font-size: 10px;
+  font-size: 20px;
   cursor: pointer;
 }
 
